@@ -1,24 +1,26 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import "./App.css";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>How to: register and login</h1>
+      <main>
+        <div className="registration">
+          <h2>Register</h2>
+          <label>Username</label>
+          <input type="text" />
+          <label>Password</label>
+          <input type="password" />
+          <button>Register</button>
+        </div>
+        <div className="login">
+          <h2>Login</h2>
+          <input type="text" placeholder="username..." />
+          <input type="password" placeholder="password..." />
+          <button>Login</button>
+        </div>
+      </main>
     </div>
   );
 }
