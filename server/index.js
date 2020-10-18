@@ -1,7 +1,7 @@
 const express = require("express");
 const mysql = require("mysql");
-require("dotenv").config();
 const cors = require("cors");
+require("dotenv").config();
 
 const app = express();
 
@@ -37,7 +37,7 @@ app.post("/login", (req, res) => {
     [username, password],
     (err, result) => {
       if (err) {
-        console.log(err);
+        res.send({ err: err });
       }
       if (result.length > 0) {
         res.send(result);

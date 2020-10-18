@@ -16,7 +16,7 @@ function App() {
       username: usernameRegister,
       password: passwordRegister,
     }).then((response) => {
-      console.log(response);
+      console.log(response.data);
     });
   };
 
@@ -25,7 +25,12 @@ function App() {
       username: usernameLogin,
       password: passwordLogin,
     }).then((response) => {
-      console.log(response);
+      if (response.data.message) {
+        setLoginStatus(response.data.message);
+      } else {
+        setLoginStatus(response.data[0].username);
+        console.log(response.data);
+      }
     });
   };
 
@@ -70,6 +75,7 @@ function App() {
           <button onClick={login}>Login</button>
         </div>
       </main>
+      <h2>{loginStatus}</h2>
     </div>
   );
 }
