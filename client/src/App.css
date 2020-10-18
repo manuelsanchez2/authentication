@@ -1,0 +1,28 @@
+main {
+  display: flex;
+  justify-content: space-around;
+}
+
+button,
+label {
+  display: block;
+}
+
+input,
+button,
+label {
+  margin-top: 1em;
+}
+
+.login {
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  text-align: center;
+}
+
+input {
+  border-radius: 5px;
+}
